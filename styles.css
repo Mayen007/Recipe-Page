@@ -54,8 +54,8 @@ body {
   flex-direction: column;
   margin: auto;
   background-color: var(--white);
-  max-width: 100%;
-  width: 450px;
+  width: 100%;
+  width: 620px;
   border-radius: 20px;
   padding: 1.2rem;
   font-size: 0.9rem;
@@ -219,8 +219,6 @@ hr {
 
 @media (max-width: 768px) {
   .container {
-    width: 100%;
-    border-radius: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
