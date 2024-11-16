@@ -55,7 +55,7 @@ body {
   margin: auto;
   background-color: var(--white);
   width: 100%;
-  width: 620px;
+  max-width: 620px;
   border-radius: 20px;
   padding: 1.2rem;
   font-size: 0.9rem;
