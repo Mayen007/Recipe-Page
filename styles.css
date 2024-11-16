@@ -1,0 +1,228 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-900: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+}
+
+@font-face {
+  font-family: 'YoungSerif-Regular';
+  src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf) format(truetype);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Outfit-Regular';
+  src: url(./assets/fonts/outfit/static/) format(truetype);
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Outfit-Bold';
+  src: url(./assets/fonts/outfit/static/Outfit-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Outfit-Light';
+  src: url(./assets/fonts/outfit/static/Outfit-Light.ttf) format(truetype);
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--stone-100);
+  font-family: 'Outfit-Regular';
+  color: var(--stone-600);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: var(--white);
+  max-width: 100%;
+  width: 450px;
+  border-radius: 20px;
+  padding: 1.2rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-family: 'YoungSerif-Regular';
+
+}
+
+.description {
+  font-size: 0.9rem;
+  color: var(--stone-600);
+  margin-bottom: 20px;
+}
+
+.rose-bg {
+  display: block;
+  width: 100%;
+  background-color: var(--rose-50);
+  padding: 1rem;
+}
+
+.div-heading {
+  color: var(--rose-900);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--brown-800);
+  margin-bottom: 20px;
+  font-family: 'YoungSerif-Regular';
+  margin-top: 25px;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.preparation-li {
+  list-style: none;
+  color: var(--stone-900);
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+.preparation-li::before {
+  content: "●";
+  color: var(--rose-900);
+  font-size: 0.6rem;
+  margin-right: 20px;
+}
+
+.ingredients-li {
+  list-style: none;
+  /* color: var(--brown-800); */
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+.ingredients-li:before {
+  content: "●";
+  color: var(--rose-900);
+  font-size: 0.6rem;
+  margin-right: 20px;
+}
+
+/* .instructions-li {
+  margin-bottom: 10px;
+  margin-left: 18px;
+  line-height: 20px;
+}
+
+.instructions-li::before {
+  content: "";
+  font-weight: bold;
+  color: var(--brown-800);
+} */
+ol {
+  counter-reset: instructions-counter;
+}
+
+.instructions-li {
+  margin-bottom: 10px;
+  margin-left: 18px;
+  line-height: 20px;
+  list-style: none;
+  position: relative;
+  counter-increment: instructions-counter;
+}
+
+.instructions-li::before {
+  content: counter(instructions-counter) ". ";
+  font-weight: 900;
+  color: var(--brown-800);
+  position: absolute;
+  left: -18px;
+  /* Adjust this value to align the number */
+}
+
+.instructions-li .bold {
+  font-weight: 900;
+  font-size: 1rem;
+
+}
+
+.nutrition-li {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* Center the children horizontally */
+  list-style: none;
+  border-bottom: 1px solid var(--stone-150);
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+}
+
+.value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--brown-800);
+  font-size: 1rem;
+  text-align: center;
+  /* Center the text within the element */
+  flex: 1;
+  /* Allow the value to take up available space */
+}
+
+hr {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid var(--stone-150);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    border-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+}
