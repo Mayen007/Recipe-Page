@@ -54,8 +54,8 @@ body {
   flex-direction: column;
   margin: auto;
   background-color: var(--white);
-  width: 100%;
-  max-width: 620px;
+  max-width: 100%;
+  width: 650px;
   border-radius: 20px;
   padding: 1.2rem;
   font-size: 0.9rem;
@@ -138,17 +138,6 @@ body {
   margin-right: 20px;
 }
 
-/* .instructions-li {
-  margin-bottom: 10px;
-  margin-left: 18px;
-  line-height: 20px;
-}
-
-.instructions-li::before {
-  content: "";
-  font-weight: bold;
-  color: var(--brown-800);
-} */
 ol {
   counter-reset: instructions-counter;
 }
@@ -168,37 +157,12 @@ ol {
   color: var(--brown-800);
   position: absolute;
   left: -18px;
-  /* Adjust this value to align the number */
 }
 
 .instructions-li .bold {
   font-weight: 900;
   font-size: 1rem;
 
-}
-
-.nutrition-li {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  /* Center the children horizontally */
-  list-style: none;
-  border-bottom: 1px solid var(--stone-150);
-  margin-bottom: 10px;
-  padding-bottom: 6px;
-}
-
-.value {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: var(--brown-800);
-  font-size: 1rem;
-  text-align: center;
-  /* Center the text within the element */
-  flex: 1;
-  /* Allow the value to take up available space */
 }
 
 hr {
@@ -208,13 +172,40 @@ hr {
   border: 1px solid var(--stone-150);
 }
 
+table {
+  margin: 26px 0px 0px;
+  padding: 0px;
+}
+
+table tr td:nth-child(1) {
+  font-family: 'Outfit-Regular';
+  color: var(--stone-600);
+}
+
+table tr td:nth-child(2) {
+  font-family: 'Outfit-Bold';
+  color: var(--brown-800);
+}
+
+td {
+  border-top: 1px solid var(--stone-150);
+  padding: 8px;
+}
+
+tr:first-child td {
+  border-top: none;
+}
+
 .attribution {
-  font-size: 11px;
+  font-size: 13px;
   text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--rose-900);
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {
