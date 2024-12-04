@@ -52,14 +52,13 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: 0 auto;
   background-color: var(--white);
   max-width: 100%;
   width: 650px;
   border-radius: 20px;
-  padding: 1.2rem;
-  font-size: 0.9rem;
-  font-family: inherit;
+  padding: 1.5rem;
+  margin-top: 2rem;
 }
 
 .image {
@@ -70,7 +69,7 @@ body {
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-top: 20px;
   margin-bottom: 15px;
   font-family: 'YoungSerif-Regular';
@@ -126,7 +125,6 @@ body {
 
 .ingredients-li {
   list-style: none;
-  /* color: var(--brown-800); */
   margin-bottom: 5px;
   align-items: center;
 }
@@ -212,6 +210,7 @@ tr:first-child td {
   .container {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    padding: 1rem;
   }
 
 }
